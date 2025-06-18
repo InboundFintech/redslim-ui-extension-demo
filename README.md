@@ -1,12 +1,38 @@
-# React + Vite
+# Redslim UI Extension Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a demo frontend for the Redslim UI Extension, built to showcase how HubSpot UI Extensions can integrate with our middleware to provide dynamic proposal generation for Redslim’s data service offerings.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This project is a React-based single-page application bootstrapped with [Vite](https://vitejs.dev/). It simulates a CPQ-like interface where users input parameters such as data volume, service level, and subscription duration, and then receive a calculated proposal with pricing and deliverables.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend currently uses mocked calculation logic for demonstration purposes, with plans to integrate real backend middleware APIs from the [Inbound Fintech Middleware](https://github.com/InboundFintech/ift-middleware) once access is granted.
+
+---
+
+## Features
+
+- Simple, clean UI to create custom proposals
+- Dynamic calculation of pricing based on input parameters
+- Deliverables list generated based on chosen options
+- Easily extendable React components for quick iteration
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/) v16+ installed
+- Access to this repository (make sure you have permissions in the InboundFintech GitHub organization)
+
+### Installation
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:InboundFintech/redslim-ui-extension-demo.git
+cd redslim-ui-extension-demo
+```

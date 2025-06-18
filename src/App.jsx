@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import ProposalForm from './ProposalForm';
+import CalculationResult from './CalculationResult';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [proposal, setProposal] = useState(null);
+
+  const handleCalculate = ({ dataVolume, serviceLevel, duration }) => {
+    // Simple pricing logic:
+    let basePricePerGB = 5;
+    if (serviceLevel === 'premium') basePricePerGB = 8;
+    else if (serviceLevel === 'enterprise') basePricePerGB = 12;
+
+    const price = dataVolume * basePricePerGB * duration;
+
+    // Example deliverables based on input:
+    const deliverables = [
+      `${dataVolume} GB of data storage`,
+      `${serviceLevel} support package`,
+      `${duration} month(s) subscription`,
+    ];
+
+    setProposal({ price, deliverables });
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1 style={{ textAlign: 'center' }}>Redslim Proposal Builder</h1>
+      <ProposalForm onCalculate={handleCalculate} />
+      <CalculationResult result={proposal} />
+    </div>
+  );
 }
 
-export default App
+export default App;
