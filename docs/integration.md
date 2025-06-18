@@ -36,3 +36,16 @@ Once access is granted to the middleware repo (`ift-middleware`), the mock will 
   "duration": 12
 }
 ```
+
+### 📬 Expected Response Format
+
+```json
+{
+  "price": 48000,
+  "deliverables": [
+    "500 GB of data storage",
+    "premium support package",
+    "12 month(s) subscription"
+  ]
+}
+```

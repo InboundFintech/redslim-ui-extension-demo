@@ -37,6 +37,13 @@ git clone git@github.com:InboundFintech/redslim-ui-extension-demo.git
 cd redslim-ui-extension-demo
 ```
 
+### Run the app
+
+```bash
+npm install
+npm run dev
+```
+
 ### Before Submission
 
 ![Initial Form](./public/screenshot-initial.png)
