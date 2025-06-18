@@ -8,14 +8,7 @@ export default function CalculationResult({ result }) {
   const { price, deliverables } = result;
 
   return (
-    <div
-      style={{
-        maxWidth: 400,
-        margin: '20px auto',
-        padding: 10,
-        border: '1px solid #ccc',
-      }}
-    >
+    <div className="result-box">
       <h3>Proposal Summary</h3>
       <p>
         <strong>Price:</strong> ${price.toFixed(2)}

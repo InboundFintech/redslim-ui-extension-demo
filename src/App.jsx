@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProposalForm from './ProposalForm';
 import CalculationResult from './CalculationResult';
+import './App.css';
 
 function App() {
   const [proposal, setProposal] = useState(null);

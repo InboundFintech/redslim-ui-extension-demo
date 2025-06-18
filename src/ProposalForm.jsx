@@ -22,7 +22,7 @@ export default function ProposalForm({ onCalculate }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: 'auto' }}>
+    <form onSubmit={handleSubmit} className="proposal-form">
       <h2>Create Proposal</h2>
 
       <label>
