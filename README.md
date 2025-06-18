@@ -46,3 +46,7 @@ cd redslim-ui-extension-demo
 ### After Submission
 
 ![Proposal Result](./public/screenshot-result.png)
+
+## 📄 Docs
+
+- [Integration Plan](./docs/INTEGRATION.md)
