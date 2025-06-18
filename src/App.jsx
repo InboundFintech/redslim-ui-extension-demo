@@ -2,26 +2,13 @@ import React, { useState } from 'react';
 import ProposalForm from './ProposalForm';
 import CalculationResult from './CalculationResult';
 import './App.css';
+import { calculateProposal } from './services/calculateProposal';
 
 function App() {
   const [proposal, setProposal] = useState(null);
 
-  const handleCalculate = ({ dataVolume, serviceLevel, duration }) => {
-    // Simple pricing logic:
-    let basePricePerGB = 5;
-    if (serviceLevel === 'premium') basePricePerGB = 8;
-    else if (serviceLevel === 'enterprise') basePricePerGB = 12;
-
-    const price = dataVolume * basePricePerGB * duration;
-
-    // Example deliverables based on input:
-    const deliverables = [
-      `${dataVolume} GB of data storage`,
-      `${serviceLevel} support package`,
-      `${duration} month(s) subscription`,
-    ];
-
-    setProposal({ price, deliverables });
+  const handleCalculate = (inputData) => {
+    calculateProposal(inputData).then(setProposal);
   };
 
   return (
