@@ -36,3 +36,13 @@ The frontend currently uses mocked calculation logic for demonstration purposes,
 git clone git@github.com:InboundFintech/redslim-ui-extension-demo.git
 cd redslim-ui-extension-demo
 ```
+
+### Before Submission
+
+![Initial Form](./public/screenshot-initial.png)
+
+---
+
+### After Submission
+
+![Proposal Result](./public/screenshot-result.png)
